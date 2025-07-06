@@ -1,0 +1,13 @@
+C:\Users\anujk\Desktop\Assesment\EmployeeTimeVisualizer\EmployeeTimeVisualizer\obj\Debug\EmployeeTimeVisualizer.csproj.AssemblyReference.cache
+C:\Users\anujk\Desktop\Assesment\EmployeeTimeVisualizer\EmployeeTimeVisualizer\obj\Debug\EmployeeTimeVisualizer.csproj.CoreCompileInputs.cache
+C:\Users\anujk\Desktop\Assesment\EmployeeTimeVisualizer\EmployeeTimeVisualizer\bin\Debug\EmployeeTimeVisualizer.exe.config
+C:\Users\anujk\Desktop\Assesment\EmployeeTimeVisualizer\EmployeeTimeVisualizer\bin\Debug\EmployeeTimeVisualizer.exe
+C:\Users\anujk\Desktop\Assesment\EmployeeTimeVisualizer\EmployeeTimeVisualizer\bin\Debug\EmployeeTimeVisualizer.pdb
+C:\Users\anujk\Desktop\Assesment\EmployeeTimeVisualizer\EmployeeTimeVisualizer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\anujk\Desktop\Assesment\EmployeeTimeVisualizer\EmployeeTimeVisualizer\bin\Debug\System.Drawing.Common.dll
+C:\Users\anujk\Desktop\Assesment\EmployeeTimeVisualizer\EmployeeTimeVisualizer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\anujk\Desktop\Assesment\EmployeeTimeVisualizer\EmployeeTimeVisualizer\bin\Debug\System.Drawing.Common.pdb
+C:\Users\anujk\Desktop\Assesment\EmployeeTimeVisualizer\EmployeeTimeVisualizer\bin\Debug\System.Drawing.Common.xml
+C:\Users\anujk\Desktop\Assesment\EmployeeTimeVisualizer\EmployeeTimeVisualizer\obj\Debug\Employee.47EBB324.Up2Date
+C:\Users\anujk\Desktop\Assesment\EmployeeTimeVisualizer\EmployeeTimeVisualizer\obj\Debug\EmployeeTimeVisualizer.exe
+C:\Users\anujk\Desktop\Assesment\EmployeeTimeVisualizer\EmployeeTimeVisualizer\obj\Debug\EmployeeTimeVisualizer.pdb
