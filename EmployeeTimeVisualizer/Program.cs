@@ -10,8 +10,10 @@ using System.Drawing.Imaging;
 class TimeEntry
 {
     public string EmployeeName { get; set; }
-    public int TimeWorked { get; set; }
+    public DateTime StartTimeUtc { get; set; }
+    public DateTime EndTimeUtc { get; set; }
 }
+
 
 class EmployeeTime
 {
@@ -39,23 +41,33 @@ class Program
     {
         using (var client = new HttpClient())
         {
-            var response = client.GetStringAsync(API_URL).Result;
-            return JsonConvert.DeserializeObject<List<TimeEntry>>(response);
+            var response = client.GetAsync(API_URL).Result;
+
+            Console.WriteLine("Response Status: " + response.StatusCode);
+
+            var json = response.Content.ReadAsStringAsync().Result;
+            Console.WriteLine("Raw JSON response:");
+            Console.WriteLine(json.Substring(0, Math.Min(json.Length, 500))); // Print first 500 chars
+
+            return JsonConvert.DeserializeObject<List<TimeEntry>>(json);
         }
     }
 
     static List<EmployeeTime> AggregateTime(List<TimeEntry> entries)
     {
         return entries
+            .Where(e => e.EndTimeUtc > e.StartTimeUtc) // valid time entries
             .GroupBy(e => e.EmployeeName)
             .Select(g => new EmployeeTime
             {
                 Name = g.Key,
-                TotalTime = g.Sum(x => x.TimeWorked)
+                TotalTime = g.Sum(e =>
+                    (int)(e.EndTimeUtc - e.StartTimeUtc).TotalHours)
             })
             .OrderByDescending(e => e.TotalTime)
             .ToList();
     }
+
 
     static void GenerateHtml(List<EmployeeTime> employeeTimes)
     {
@@ -79,17 +91,18 @@ class Program
         Graphics g = Graphics.FromImage(bmp);
         g.Clear(Color.White);
 
-        float total = employeeTimes.Sum(e => e.TotalTime);
+        double total = employeeTimes.Sum(e => (double)e.TotalTime);
         float angleStart = 0;
         Random rnd = new Random();
 
         foreach (var emp in employeeTimes)
         {
-            float sweep = (float)emp.TotalTime / total * 360;
+            float sweep = (float)(emp.TotalTime / total * 360);
             Brush brush = new SolidBrush(Color.FromArgb(rnd.Next(100, 255), rnd.Next(100, 255), rnd.Next(100, 255)));
             g.FillPie(brush, 100, 100, 400, 400, angleStart, sweep);
             angleStart += sweep;
         }
+
 
         bmp.Save("employee_piechart.png", ImageFormat.Png);
     }

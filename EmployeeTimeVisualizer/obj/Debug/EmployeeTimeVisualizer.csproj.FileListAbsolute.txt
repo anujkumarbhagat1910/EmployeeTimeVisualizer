@@ -11,3 +11,4 @@ C:\Users\anujk\Desktop\Assesment\EmployeeTimeVisualizer\EmployeeTimeVisualizer\b
 C:\Users\anujk\Desktop\Assesment\EmployeeTimeVisualizer\EmployeeTimeVisualizer\obj\Debug\Employee.47EBB324.Up2Date
 C:\Users\anujk\Desktop\Assesment\EmployeeTimeVisualizer\EmployeeTimeVisualizer\obj\Debug\EmployeeTimeVisualizer.exe
 C:\Users\anujk\Desktop\Assesment\EmployeeTimeVisualizer\EmployeeTimeVisualizer\obj\Debug\EmployeeTimeVisualizer.pdb
+C:\Users\anujk\Desktop\Assesment\EmployeeTimeVisualizer\EmployeeTimeVisualizer\obj\Debug\EmployeeTimeVisualizer.exe.config
